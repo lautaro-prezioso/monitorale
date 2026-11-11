@@ -25,7 +25,9 @@ ESTADISTICA
 ECONOMETRIA Y MODELIZACION
 TALLER DE PRÁCTICA DE SISTEMAS CONTABLES
 CONTABILIDAD BASICA
-jUEGEN PUTITO
+ANÁLISIS E INTERPRETACION DE ESTADOS CONTABLES
+COSTOS PARA LA TOMA DE DECISIONES
+ESTADOS CONTABLES
 DERECHO APLICADO A LA TECNOLOGIA Y A LA INFORMACIÓN
 INTRODUCCION A LA ECONOMIA
 ANÁLISIS MICROECONÓMICO
@@ -83,7 +85,6 @@ Se busca generar un espacio de intercambio de habilidades profesionales entre
 alumnos y docentes, que permita desarrollar competencias profesionales y
 personales, brindando más y mejores herramientas para el futuro ejercicio
 profesional.
-JUEGUEN PUTITO JAJAJAJ
 Contador público
 Requisitos para realizar la Actividad
 No se requieren requisitos académicos previos.
