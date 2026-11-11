@@ -35,7 +35,7 @@ jobs:
         run: |
           ultimo=$(git log -1 --format=%ct)
           ahora=$(date +%s)
-          if [ $((ahora - ultimo)) -gt 0 ]; then
+          if [ $((ahora - ultimo)) -gt 2592000 ]; then
             git commit --allow-empty -m "mantener repositorio activo"
             git pull --rebase origin main && git push
           fi
