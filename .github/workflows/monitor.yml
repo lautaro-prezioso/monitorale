@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: monitor-ale
@@ -29,3 +30,17 @@ jobs:
           git config user.email "monitor-bot@users.noreply.github.com"
           git add state.txt
           git diff --cached --quiet || (git commit -m "actualizar estado" && git pull --rebase origin main && git push)
+
+      - name: Commit de actividad (si pasaron 30 días)
+        run: |
+          ultimo=$(git log -1 --format=%ct)
+          ahora=$(date +%s)
+          if [ $((ahora - ultimo)) -gt 2592000 ]; then
+            git commit --allow-empty -m "mantener repositorio activo"
+            git pull --rebase origin main && git push
+          fi
+
+      - name: Mantener el workflow activo
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow enable monitor.yml --repo ${{ github.repository }}
