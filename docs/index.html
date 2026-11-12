@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Inmobiliaria Prezioso</title>
+<meta name="description" content="Inmobiliaria Prezioso, Azul, Buenos Aires. Ventas, alquileres, campos, administraciones y tasaciones.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio">
+      <span class="brand-name">Inmobiliaria Prezioso</span>
+      <span class="brand-place">Azul · Buenos Aires</span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#propiedades">Propiedades</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Azul, provincia de Buenos Aires</p>
+        <h1>Su próxima inversión, en Azul.</h1>
+        <p class="lead">Negocios inmobiliarios, campos, alquileres, administraciones, tasaciones y asesoramiento en inversiones.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#propiedades">Ver propiedades</a>
+          <a class="btn" href="#contacto">Contacto</a>
+        </div>
+      </div>
+      <dl class="ficha" aria-label="Datos de contacto">
+        <div><dt>Dirección</dt><dd id="f-dir"></dd></div>
+        <div><dt>Teléfono</dt><dd id="f-tel"></dd></div>
+        <div><dt>Mail</dt><dd id="f-mail"></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" id="propiedades">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>Propiedades</h2>
+        <p class="count" id="contador" aria-live="polite"></p>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtros">
+        <div class="chips" id="chips-operacion">
+          <button type="button" class="chip" data-op="todas" aria-pressed="true">Todas</button>
+          <button type="button" class="chip" data-op="venta" aria-pressed="false">Venta</button>
+          <button type="button" class="chip" data-op="alquiler" aria-pressed="false">Alquiler</button>
+        </div>
+        <label class="select">
+          <span>Tipo</span>
+          <select id="filtro-tipo">
+            <option value="todos">Todos</option>
+            <option value="casa">Casas</option>
+            <option value="departamento">Departamentos</option>
+            <option value="comercial">Comerciales</option>
+            <option value="terreno">Terrenos</option>
+            <option value="campo">Campos</option>
+          </select>
+        </label>
+      </div>
+      <div class="lista" id="lista"></div>
+      <div class="vacio" id="vacio" hidden>
+        <p class="vacio-titulo">Por el momento no hay propiedades con ese filtro.</p>
+        <p>Escribinos o llamanos y te avisamos cuando tengamos algo que se ajuste a lo que buscás.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="servicios">
+    <div class="wrap">
+      <h2>Servicios</h2>
+      <ul class="servicios">
+        <li>Negocios inmobiliarios</li>
+        <li>Campos</li>
+        <li>Alquileres</li>
+        <li>Administraciones</li>
+        <li>Tasaciones</li>
+        <li>Asesoramiento en inversiones</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="contacto">
+    <div class="wrap contacto-grid">
+      <div>
+        <h2>Contacto</h2>
+        <p class="lead">Estamos en el centro de Azul. Pasá por la oficina o consultanos por cualquier propiedad o campo.</p>
+      </div>
+      <ul class="contacto-lista">
+        <li><span>Dirección</span><strong id="c-dir"></strong><a class="enlace" id="c-mapa" href="#" target="_blank" rel="noopener">Cómo llegar</a></li>
+        <li><span>Teléfono</span><strong id="c-tel"></strong><a class="enlace" id="c-llamar" href="#">Llamar</a></li>
+        <li><span>Mail</span><strong id="c-mail"></strong><a class="enlace" id="c-escribir" href="#">Escribir</a></li>
+        <li id="c-wa-item" hidden><span>WhatsApp</span><strong>Consultas rápidas</strong><a class="enlace" id="c-wa" href="#" target="_blank" rel="noopener">Abrir chat</a></li>
+        <li id="c-ig-item" hidden><span>Instagram</span><strong>Novedades</strong><a class="enlace" id="c-ig" href="#" target="_blank" rel="noopener">Ver perfil</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-bar">
+    <span>© <span id="anio"></span> Inmobiliaria Prezioso</span>
+    <span id="foot-dir"></span>
+  </div>
+</footer>
+
+<script src="datos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
